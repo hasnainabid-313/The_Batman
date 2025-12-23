@@ -76,7 +76,7 @@ body {
 /* ===== SECTION ===== */
 .bat-section {
   padding: var(--lg) var(--md);
-  background: rgba(5,5,5,0.85);
+  background: rgba(5,5,5,0.30);
 }
 
 .bat-section__title {
