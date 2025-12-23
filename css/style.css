@@ -1,0 +1,132 @@
+:root {
+  /* Colors */
+  --black: #050505;
+  --dark: #1a1a1a;
+  --red: #ff0b0b;
+  --text: #d6d6d6;
+  --muted: #888;
+
+  /* Fonts */
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Bebas Neue', sans-serif;
+
+  /* Spacing */
+  --xs: 8px;
+  --sm: 16px;
+  --md: 32px;
+  --lg: 64px;
+
+  /* Z-index */
+  --z-base: 1;
+  --z-overlay: 10;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background:
+    linear-gradient(rgba(5,5,5,0.40), rgba(5,5,5,0.30)),
+    url("../assets/batman-bg.jpg") center/cover fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+/* ===== NAV ===== */
+.bat-nav {
+  padding: var(--sm);
+  background: rgba(5,5,5,0.9);
+}
+
+.bat-nav a {
+  margin-right: var(--sm);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.bat-nav a:hover {
+  color: var(--red);
+}
+
+/* ===== HERO ===== */
+.bat-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bat-hero__title {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  color: var(--red);
+  letter-spacing: 6px;
+}
+
+.bat-hero__subtitle {
+  color: var(--muted);
+}
+
+/* ===== SECTION ===== */
+.bat-section {
+  padding: var(--lg) var(--md);
+  background: rgba(5,5,5,0.85);
+}
+
+.bat-section__title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  color: var(--red);
+  margin-bottom: var(--md);
+}
+
+/* ===== CARDS ===== */
+.bat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--md);
+}
+.bat-card p span.level-easy { color: #00ff00; }
+.bat-card p span.level-medium { color: #ffbf00; }
+.bat-card p span.level-hard { color: #ff0000; }
+
+
+.bat-card {
+  background: var(--dark);
+  padding: var(--md);
+  border-left: 12px solid var(--red);
+}
+.bat-card:hover {
+  box-shadow: 0 0 40px var(--red);
+  transform: translateY(-4px);
+  transition: all 0.5s ease;
+}
+
+/* ===== LINKS ===== */
+.bat-link {
+  color: var(--red);
+  text-decoration: none;
+}
+
+
+
+@keyframes sweep {
+  from { top: -300px; }
+  to { top: 50px; }
+}
+
+.bat-card img {
+  width: 100%;
+  margin-bottom: var(--sm);
+  border: 1px solid var(--red);
+  opacity: 0.9;
+}
+
+
+
